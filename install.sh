@@ -6,6 +6,9 @@ sudo apt update && sudo apt upgrade -y
 # install gcc and developer tools
 sudo apt install build-essential -y 
 
+# todo: separate installations according to package manager
+# this is to ensure that nothing breaks
+
 # install zsh and ohmyzsh
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -35,3 +38,15 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 
 # add bob to PATH
 # echo 'export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"' >> ~/.bashrc
+
+# install fzf
+# brew install fzf
+
+# install ripgrep
+# brew install ripgrep
+
+# install fd
+# brew install fd
+
+# symlink init.lua for neovim
+ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
