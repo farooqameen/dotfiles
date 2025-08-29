@@ -6,6 +6,7 @@ vim.o.swapfile = false
 vim.o.background = "dark"
 vim.o.timeoutlen = 800
 vim.g.mapleader = ' '
+vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
