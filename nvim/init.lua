@@ -4,6 +4,14 @@ vim.o.wrap = false
 vim.o.tabstop = 4
 vim.o.swapfile = false
 vim.o.background = "dark"
+vim.o.timeoutlen = 800
+vim.g.mapleader = ' '
+
+vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
+vim.keymap.set('n', '<leader>w', ':write<CR>')
+vim.keymap.set('n', '<leader>q', ':quit<CR>')
+
+vim.keymap.set('i', 'jj', '<ESC>')
 
 vim.pack.add({
 		{src = "https://github.com/EdenEast/nightfox.nvim"},
