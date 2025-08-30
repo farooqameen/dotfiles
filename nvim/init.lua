@@ -7,7 +7,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 vim.o.swapfile = false
-vim.o.background = "dark"
+vim.o.background = NONE
 vim.o.timeoutlen = 800
 vim.g.mapleader = ' '
 
@@ -43,3 +43,5 @@ vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
 
 vim.cmd("colorscheme moonfly")
+vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+vim.cmd("highlight LineNr guibg=NONE ctermbg=NONE")
