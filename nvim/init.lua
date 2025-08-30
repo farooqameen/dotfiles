@@ -32,9 +32,14 @@ vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.keymap.set('i', 'jj', '<ESC>')
 
 vim.pack.add({
-		{src = "https://github.com/EdenEast/nightfox.nvim"},
-		{src = "https://github.com/nanotech/jellybeans.vim"},
-		{src = "http://github.com/bluz71/vim-moonfly-colors"},
+    {src = "https://github.com/EdenEast/nightfox.nvim"},
+    {src = "https://github.com/nanotech/jellybeans.vim"},
+    {src = "http://github.com/bluz71/vim-moonfly-colors"},
+    {src = "https://github.com/nvim-mini/mini.nvim.git"},
 })
+
+require "mini.pick".setup()
+vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
+vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
 
 vim.cmd("colorscheme moonfly")
