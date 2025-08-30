@@ -33,11 +33,12 @@ sudo apt install okular -y
 
 # add brew to PATH
 # echo >> ~/.bashrc
-# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+# echo >> ~/.zshrc
+# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install bob
-# sudo brew install bob
+sudo brew install bob
 
 # add bob to PATH
 # echo 'export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"' >> ~/.bashrc
@@ -46,7 +47,7 @@ sudo apt install okular -y
 # brew install fzf
 
 # install ripgrep
-# brew install ripgrep
+brew install ripgrep
 
 # install fd
 # brew install fd

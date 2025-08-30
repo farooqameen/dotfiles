@@ -4,7 +4,7 @@ vim.o.wrap = true
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-vim.o.expandtab = true
+-- vim.o.expandtab = true
 
 vim.o.swapfile = false
 vim.o.background = NONE
@@ -24,6 +24,14 @@ vim.g.clipboard = {
     },
     cache_enabled = 0,
 }
+
+local autocmd = vim.api.nvim_create_autocmd
+autocmd("Filetype", {
+    pattern = "*",
+    callback = function()
+        vim.opt_local.formatoptions:remove { 'c', 'r', 'o' }
+    end,
+})
 
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
