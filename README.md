@@ -11,3 +11,5 @@ My keyboard layout inspired by [The Symmetric Typing Project](https://kennetchaz
 [Okular](https://okular.kde.org/) for Markdown preview
 
 Delete line in WezTerm: Ctrl + u
+
+[You Don't Need Plugins: A NeoVim Config for Minimalists](https://www.youtube.com/watch?v=skW3clVG5Fo)
