@@ -28,6 +28,9 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 # install brew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# install okular
+sudo apt install okular -y
+
 # add brew to PATH
 # echo >> ~/.bashrc
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
