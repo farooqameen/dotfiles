@@ -51,4 +51,5 @@ ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 git config --global user.email "farooqameencs@gmail.com"
 git config --global user.name "farooqameen"
 git config --global core.editor "nvim"
-git config --global credential.helper "/mnt/c/Users/farooq/AppData/Local/Programs/Git/mingw64/bin/git-credential/manager.exe"
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+# git config --global credential.helper "/mnt/c/Users/FarooqAmeen/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe
