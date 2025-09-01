@@ -1,41 +1,32 @@
 #!/bin/bash
 
+# symlink .bashrc and .zshrc
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+
+# use new .bashrc
+source ~/.bashrc
+
 # update system
 sudo apt update && sudo apt upgrade -y
 
 # install gcc and developer tools
 sudo apt install build-essential -y 
 
-# todo: separate installations according to package manager
-# this is to ensure that nothing breaks
+# install okular
+sudo apt install okular -y
 
-# install zsh and ohmyzsh
+# install zsh
+sudo apt install zsh -y
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    sudo apt install zsh -y
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
-
-    # change shell
-    chsh -s $(which zsh)    
-else
-    echo "zsh already installed"
-fi
-
-# symlink .bashrc and .zshrc
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
 # install brew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install okular
-sudo apt install okular -y
-
-# add brew to PATH
-# echo >> ~/.bashrc
-# echo >> ~/.zshrc
-# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# add brew to path
+# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" >> ~/.bashrc
 
 # install bob
 sudo brew install bob
@@ -43,14 +34,21 @@ sudo brew install bob
 # add bob to PATH
 # echo 'export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"' >> ~/.bashrc
 
+# install neovim nightly
+bob install nightly
+bob use nightly
+
+# symlink init.lua for neovim
+ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+
 # install fzf
 # brew install fzf
-
-# install ripgrep
-brew install ripgrep
 
 # install fd
 # brew install fd
 
-# symlink init.lua for neovim
-ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+# set git config
+git config --global user.email "farooqameencs@gmail.com"
+git config --global user.name "farooqameen"
+git config --global core.editor "nvim"
+git config --global credential.helper "/mnt/c/Users/farooq/AppData/Local/Programs/Git/mingw64/bin/git-credential/manager.exe"
