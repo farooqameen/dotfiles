@@ -108,3 +108,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # add bob to PATH
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+# invoke python3 as python
+alias python=python3
