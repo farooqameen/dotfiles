@@ -4,12 +4,15 @@ vim.o.wrap = true
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
--- vim.o.expandtab = true
+vim.o.expandtab = true
 
 vim.o.swapfile = false
 vim.o.background = NONE
 vim.o.timeoutlen = 800
 vim.g.mapleader = ' '
+
+vim.o.listchars = 'tab:>>,space:\\u00b7' -- unicode for Middle Dot / interpunct
+vim.o.list = true
 
 vim.o.clipboard = 'unnamedplus'
 vim.g.clipboard = {
