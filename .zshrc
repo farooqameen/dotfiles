@@ -113,4 +113,8 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 alias python=python3
 
 # add uv to PATH
+. "$HOME/.local/bin/env"
+
+# enable uv shell autocompletion
 eval "$(uv generate-shell-completion zsh)"
+
