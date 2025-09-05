@@ -111,3 +111,6 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 # invoke python3 as python
 alias python=python3
+
+# add uv to PATH
+eval "$(uv generate-shell-completion zsh)"
