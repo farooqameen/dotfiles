@@ -25,21 +25,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # install brew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# add brew to path
-# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" >> ~/.bashrc
+# install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # install bob
 sudo brew install bob
-
-# add bob to PATH
-# echo 'export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"' >> ~/.bashrc
 
 # install neovim nightly
 bob install nightly
 bob use nightly
 
-# symlink init.lua for neovim
-ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+# symlink neovim config folder
+rm -rf ~/.config/nvim
+ln -sf ~/dotfiles/nvim/ ~/.config/nvim/
 
 # install fzf
 # brew install fzf
