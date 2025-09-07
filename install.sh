@@ -28,9 +28,6 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 # install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# install bob
-sudo brew install bob
-
 # install neovim nightly
 bob install nightly
 bob use nightly
@@ -39,15 +36,10 @@ bob use nightly
 rm -rf ~/.config/nvim
 ln -sf ~/dotfiles/nvim/ ~/.config/nvim/
 
-# install fzf
-# brew install fzf
-
-# install fd
-# brew install fd
-
 # set git config
 git config --global user.email "farooqameencs@gmail.com"
 git config --global user.name "farooqameen"
 git config --global core.editor "nvim"
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 # git config --global credential.helper "/mnt/c/Users/FarooqAmeen/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe
+

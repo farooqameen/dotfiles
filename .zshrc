@@ -118,3 +118,9 @@ alias python=python3
 # enable uv shell autocompletion
 eval "$(uv generate-shell-completion zsh)"
 
+# add node to PATH
+export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
+
+# add fzf to PATH
+source <(fzf --zsh)
+

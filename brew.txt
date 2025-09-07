@@ -1,0 +1,6 @@
+bob
+fzf
+fd
+ripgrep
+ruff
+

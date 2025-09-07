@@ -1,6 +1,7 @@
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.wrap = true
+vim.o.signcolumn = "number"
 
 vim.o.swapfile = false
 vim.o.background = NONE
@@ -31,11 +32,12 @@ vim.pack.add({
     {src = "https://github.com/tpope/vim-surround"},
 })
 
--- todo: configure pylsp
-  
+vim.lsp.enable({"pylsp", "ruff"})
+
 require "mini.pick".setup()
 require("keymaps")
 
 vim.cmd("colorscheme moonfly")
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 vim.cmd("highlight LineNr guibg=NONE ctermbg=NONE")
+vim.cmd("highlight signcolumn guibg=NONE ctermbg=NONE")
