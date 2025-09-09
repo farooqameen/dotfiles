@@ -15,8 +15,6 @@ vim.o.expandtab = true
 vim.o.listchars = 'tab:-->,space:\\u00b7' -- unicode for Middle Dot / interpunct
 vim.o.list = true
 
-require("clipboard")
-
 local autocmd = vim.api.nvim_create_autocmd
 autocmd("Filetype", {
     pattern = "*",
@@ -35,7 +33,10 @@ vim.pack.add({
 vim.lsp.enable({"pylsp", "ruff"})
 
 require "mini.pick".setup()
+require("clipboard")
 require("keymaps")
+
+-- todo: add fzf-lua for better grep
 
 vim.cmd("colorscheme moonfly")
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")

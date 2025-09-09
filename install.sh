@@ -10,15 +10,6 @@ source ~/.bashrc
 # update system
 sudo apt update && sudo apt upgrade -y
 
-# install gcc and developer tools
-sudo apt install build-essential -y 
-
-# install okular
-sudo apt install okular -y
-
-# install zsh
-sudo apt install zsh -y
-
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
