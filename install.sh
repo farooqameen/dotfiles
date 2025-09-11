@@ -19,6 +19,9 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 # install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+#install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # install neovim nightly
 bob install nightly
 bob use nightly

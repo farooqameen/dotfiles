@@ -1,3 +1,4 @@
 build-essential
 okular
 zsh
+libsdl2-dev
