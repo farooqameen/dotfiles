@@ -124,3 +124,5 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
 # add fzf to PATH
 source <(fzf --zsh)
 
+# add rust to PATH
+. "$HOME/.cargo/env"
