@@ -119,3 +119,4 @@ fi
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 . "$HOME/.cargo/env"
+

@@ -126,3 +126,4 @@ source <(fzf --zsh)
 
 # add rust to PATH
 . "$HOME/.cargo/env"
+
