@@ -28,7 +28,7 @@ bob use nightly
 
 # symlink neovim config folder
 rm -rf ~/.config/nvim
-ln -sf ~/dotfiles/nvim/ ~/.config/nvim/
+ln -sf ~/dotfiles/nvim/ ~/.config/
 
 # set git config
 git config --global user.email "farooqameencs@gmail.com"
