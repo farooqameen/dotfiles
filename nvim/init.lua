@@ -12,7 +12,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
-vim.o.listchars = 'tab:-->,space:\\u00b7' -- unicode for Middle Dot / interpunct
+vim.o.listchars = 'tab:-->,space:\u{00b7}' -- unicode for Middle Dot / interpunct
 vim.o.list = true
 
 local autocmd = vim.api.nvim_create_autocmd
@@ -35,6 +35,10 @@ vim.lsp.enable({"pylsp", "ruff"})
 require "mini.pick".setup()
 require("clipboard")
 require("keymaps")
+
+vim.diagnostic.config({
+    virtual_text = {true, prefix = "\u{00b7}"}
+})
 
 -- todo: add fzf-lua for better grep
 
