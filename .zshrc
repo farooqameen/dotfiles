@@ -127,3 +127,5 @@ source <(fzf --zsh)
 # add rust to PATH
 . "$HOME/.cargo/env"
 
+# activate venv
+alias venv="source .venv/bin/activate"
