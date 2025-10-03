@@ -6,6 +6,7 @@ vim.keymap.set('i', 'jj', '<ESC>')
 vim.keymap.set('n', '<leader>x', ':quit!<CR>')
 vim.keymap.set('n', '<Enter>', 'o<ESC>')
 vim.keymap.set('n', '<leader><Enter>', 'O<ESC>')
+vim.keymap.set('n', '<leader>/', ':nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
