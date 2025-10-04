@@ -123,6 +123,15 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
 
 # add fzf to PATH
 source <(fzf --zsh)
+# configure fzf
+export FZF_DEFAULT_OPTS="
+--style minimal \
+--preview 'fzf-preview.sh {}' \
+--bind 'focus:transform-header:file \
+--brief {}' \
+--height 40% \
+--border \
+"
 
 # add rust to PATH
 . "$HOME/.cargo/env"

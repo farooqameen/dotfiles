@@ -10,5 +10,6 @@ vim.keymap.set('n', '<leader>/', ':nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
+vim.keymap.set('n', '<leader>n', ':Neotree<CR>')
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)

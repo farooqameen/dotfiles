@@ -34,6 +34,7 @@ vim.lsp.enable({"pylsp", "ruff"})
 
 require "mini.pick".setup()
 require("cmp")
+require("tree")
 require("clipboard")
 require("keymaps")
 
