@@ -8,8 +8,14 @@ vim.keymap.set('n', '<Enter>', 'o<ESC>')
 vim.keymap.set('n', '<leader><Enter>', 'O<ESC>')
 vim.keymap.set('n', '<leader>/', ':nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
+-- disable <leader>f
+-- this avoids entering operator-pending mode
+vim.keymap.set('n', '<leader>f', '<Nop>')
+
+vim.keymap.set('n', '<leader>ff', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
-vim.keymap.set('n', '<leader>n', ':Neotree<CR>')
+vim.keymap.set('n', '<leader>fb', ':Pick buffers<CR>')
+
+vim.keymap.set('n', '<leader>t', ':Neotree<CR>')
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
