@@ -27,12 +27,18 @@ vim.pack.add({
     {src = "http://github.com/bluz71/vim-moonfly-colors"},
     {src = "https://github.com/nvim-mini/mini.nvim.git"},
     {src = "https://github.com/neovim/nvim-lspconfig"},
-    {src = "https://github.com/tpope/vim-surround"},
 })
 
 vim.lsp.enable({"pylsp", "ruff"})
 
 require "mini.pick".setup()
+require "mini.surround".setup({
+    search_method = "cover_or_next",
+})
+require "mini.cursorword".setup({
+    delay = 0,
+})
+require "mini.pairs".setup()
 require("cmp")
 require("tree")
 require("clipboard")
