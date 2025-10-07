@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "version": "'v1.7.0'"
+    },
+    "friendly-snippets": [],
+    "mini.nvim": [],
+    "nvim-lspconfig": [],
+    "vim-moonfly-colors": []
+  }
+}
